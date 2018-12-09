@@ -6,8 +6,8 @@ int main() {
     //変数定義
     int i, j, k;
 
-    const int height = 1000;
-    const int width  = 1000;
+    const int height = 100;
+    const int width  = 100;
 
     double data1[height][width];
     double data2[height][width];
@@ -35,7 +35,7 @@ int main() {
 
 
     //計算処理
-    //#pragma omp parallel        //ここが並列実行するブロック指定
+    #pragma omp parallel        //ここが並列実行するブロック指定
     {
 
         for(i=0;i<height;i++) {
