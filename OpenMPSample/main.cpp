@@ -10,8 +10,8 @@ int main() {
     //変数定義
     int i, j, k;
 
-    const int height = 10000;
-    const int width  = 10000;
+    const int height = 5000;
+    const int width  = 5000;
 
     double *data1;
     double *data2;
@@ -20,6 +20,21 @@ int main() {
     data1 = (double *)malloc((sizeof(double)) * height * width);
     data2 = (double *)malloc((sizeof(double)) * height * width);
     data3 = (double *)malloc((sizeof(double)) * height * width);
+
+    if (data1 == NULL) {
+        printf("data1 malloc error\n");
+        return -1;
+    }
+
+    if (data2 == NULL) {
+        printf("data2 malloc error\n");
+        return -1;
+    }
+
+    if (data3 == NULL) {
+        printf("data3 malloc error\n");
+        return -1;
+    }
 
 
     //現在時刻取得
